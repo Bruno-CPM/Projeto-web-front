@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra seu Personagem da Dora Aventureira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Página Inicial -->
+        <div id="home-page" class="page active">
+            <div class="welcome-section">
+                <h1> Descubra seu Personagem da Dora Aventureira! </h1>
+                <div class="welcome-content">
+                    <p>Bem-vindo ao universo mágico da Dora Aventureira! 🗺️</p>
+                    <p>Você está prestes a embarcar em uma jornada incrível para descobrir qual personagem combina mais com sua personalidade.</p>
+                    <p>Será que você é corajoso como a <strong>Dora</strong>, divertido como o <strong>Botas</strong>, ou astuto como o <strong>Raposo</strong>?</p>
+                </div>
+                
+                <div class="characters-preview">
+                    <div class="character-card">
+                        <div class="character-icon">🧍‍♀️</div>
+                        <h3>Dora</h3>
+                        <p>Aventureira, curiosa e sempre pronta para ajudar</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-icon">🐒</div>
+                        <h3>Botas</h3>
+                        <p>Divertido, leal e adora brincar</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-icon"></div>
+                        <h3>Raposo</h3>
+                        <p>Esperto, astuto e vive tentando pegar coisas escondidas</p>
+                    </div>
+                </div>
+                
+                <button class="start-button" onclick="startQuiz()">
+                     Começar Aventura!
+                </button>
+            </div>
+        </div>
+
+        <!-- Questionário -->
+        <div id="quiz-page" class="page">
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-question">1</span> de 10
+                </div>
+                
+                <div class="question-section">
+                    <h2 id="question-text"></h2>
+                    <div class="options-container" id="options-container">
+                        <!-- Opções serão inseridas dinamicamente -->
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="prev-button" onclick="previousQuestion()" disabled>← Anterior</button>
+                    <button id="next-button" onclick="nextQuestion()" disabled>Próxima →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Resultado -->
+        <div id="result-page" class="page">
+            <div class="result-container">
+                <h1> Seu Resultado! </h1>
+                
+                <div class="result-character" id="result-character">
+                    <!-- Resultado será inserido dinamicamente -->
+                </div>
+                
+                <div class="result-details">
+                    <div class="score-display">
+                        <h3>Pontuação Total:</h3>
+                        <div class="scores">
+                            <div class="score-item">
+                                <span class="character-name"> Dora:</span>
+                                <span class="score-value" id="dora-score">0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="character-name"> Botas:</span>
+                                <span class="score-value" id="botas-score">0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="character-name"> Raposo:</span>
+                                <span class="score-value" id="raposo-score">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button class="restart-button" onclick="restartQuiz()">
+                         Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
